@@ -1,8 +1,7 @@
 package com.example.demo.Service;
 
 import java.util.List;
-
-import javax.transaction.Transactional;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,34 +13,36 @@ import com.example.demo.Repository.bukuRepository;
 public class bukuService {
 	
 	@Autowired
-	private bukuRepository buku;
-
-	// menampilkan data
-	public Iterable<Buku> findAll() {
+	bukuRepository buku;
+	
+	// tambah data
+	
+	public void save(Buku book) {
+		buku.save(book);
+	}
+	
+	// get data by id 
+	
+	public Optional<Buku> findById(long id) {
+		return buku.findById(id);
+	}
+	
+	// tampilkan data
+	public List<Buku> tampilkanListBuku() {
 		return buku.findAll();
 	}
-	// save data
-	public Buku save(Buku x) {
-		return buku.save(x);
-	}
-	// update data
-
-	// edit data 
 	
-	// delete 
-	public void delete(Buku x) {
-		this.buku.delete(x);
+	// delete by id
+	
+	public void delete(Long id) {
+		buku.deleteById(id);
 	}
 	
-	// delete by id 
-	public void deleteById(Long y) {
-		this.buku.deleteById(y);
-	}
-	
-	// delete semua 
+	// delete semuanya 
 	public void deleteAll() {
-		this.buku.deleteAll();
+		buku.deleteAll();
 	}
+	
 	
 
 }

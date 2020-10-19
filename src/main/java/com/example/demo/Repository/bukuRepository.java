@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.Model.Buku;
 
 @Repository
-public interface bukuRepository extends CrudRepository<Buku, Long> {
+public interface bukuRepository extends JpaRepository<Buku, Long> {
 
 }
