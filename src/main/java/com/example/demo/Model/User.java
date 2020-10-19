@@ -27,4 +27,8 @@ public class User {
 	public String name;
 	@NotBlank(message = "email harus di isi")
 	public String email;
+	public void setId(long id2) {
+		// TODO Auto-generated method stub
+		
+	}
 }
