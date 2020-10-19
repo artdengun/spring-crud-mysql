@@ -5,7 +5,9 @@ import java.util.Optional;
 
 import com.example.demo.Model.User;
 import com.example.demo.Repository.UserRepository;
+import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -18,7 +20,6 @@ public class UserController {
 
 	@Autowired
 	private UserRepository userRepository;
-
 	@GetMapping("/signup")
 	public String showSignUpForm(User user) {
 		return "add-user";
