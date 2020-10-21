@@ -5,10 +5,13 @@
  */
 package com.example.demo.Controller;
 
+import org.springframework.stereotype.Controller;
+
 /**
  *
  * @author childcasavva
  */
+@Controller
 public class PelangganController {
     
 }

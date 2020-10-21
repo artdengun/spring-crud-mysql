@@ -6,7 +6,7 @@
  */
 package com.example.demo.Repository;
 
-import com.example.demo.Model.Country;
+import com.example.demo.Model.BahanBaku;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Repository;
  * @author childcasavva
  */
 @Repository
-public interface BahanBakuRepository extends JpaRepository<Country, Integer>{
+public interface BahanBakuRepository extends JpaRepository<BahanBaku, Integer>{
     
 }
