@@ -30,13 +30,13 @@ public class CountryController {
     
         @GetMapping("/register")
         public String getRegiter() {
-        return "register";
+        return "index";
                 }
 	@GetMapping("/countries")
 	public String getCountries(Model model) {		
 		          List<Country> countryList = countryService.getCountries();	
 		model.addAttribute("countries", countryList);	
-		return "country";
+		return "index";
 	}	
 	
 	@PostMapping("/countries/addNew")

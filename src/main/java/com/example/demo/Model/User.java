@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,18 +19,20 @@ import lombok.NoArgsConstructor;
  * @author childcasavva
  */
 
+
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "country")
-public class Country {
-        
+@Table(name = "table_user")
+public class User {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public Integer id;
-    public String nama;
-    public String asal;
-    public String email;
-    public String alamat;
+    public Integer id_user;
+    public String user_name;
+    public String password;
+    public String nama_user;
+    public String level;
+    
 }
