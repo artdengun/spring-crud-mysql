@@ -26,7 +26,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class CountryController {
     @Autowired
 	private CountryService countryService;
-
+    
+    
+        @GetMapping("/register")
+        public String getRegiter() {
+        return "register";
+                }
 	@GetMapping("/countries")
 	public String getCountries(Model model) {		
 		          List<Country> countryList = countryService.getCountries();	
