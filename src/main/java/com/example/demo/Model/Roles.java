@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -21,26 +20,20 @@ import lombok.NoArgsConstructor;
  *
  * @author childcasavva
  */
-
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "table_user")
-public class User {
+@Table(name = "s_role")
+public class Roles {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    public Integer id_user;
-    public String user_name;
-    public String password;
-    public String nama_user;
-    public String level;
-    private boolean active;
-        
-      @OneToMany(mappedBy = "user")
-    private List<UserRoles> roles = new ArrayList<>();
-
+    @GeneratedValue
+    private Integer id;
+    private String nama;
+    
+    
+    @OneToMany(mappedBy = "role")
+    private List<UserRoles> list = new ArrayList<>();
     
 }
